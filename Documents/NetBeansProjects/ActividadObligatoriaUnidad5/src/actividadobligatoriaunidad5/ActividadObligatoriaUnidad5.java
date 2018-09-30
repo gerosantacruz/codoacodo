@@ -28,7 +28,9 @@ public class ActividadObligatoriaUnidad5 {
         
         System.out.println(newLine);
         
-       p1.toString();
+        System.out.println(p1.toString());
+        
+        
         
         
        

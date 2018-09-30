@@ -12,17 +12,17 @@ package actividadobligatoriaunidad5;
 public class Electrodomestico {
     
     //variables
-    private int precioBase;
+    int precioBase;
     private String color;
     private char consumoEnergetico;
     private double peso;
     
     //Por default
     
-    private final static int PRECBASE = 10000;
-    private final static String COLORBASE = "blanco";
-    private final static char CONSBASE = 'F';
-    private final static double PESOBASE = 5;
+    static final int PRECBASE = 10000;
+    static final String COLORBASE = "blanco";
+    static final char CONSBASE = 'F';
+    static final double PESOBASE = 5;
     
     /**
      * @return the precioBase
@@ -110,23 +110,6 @@ public class Electrodomestico {
     
     
     
-    //Constructores 
-    
-    public Electrodomestico(){}
-    
-    public Electrodomestico(int precio, double peso){
-        this.precioBase = precio;
-        this.peso = peso;
-    }
-    
-    public Electrodomestico(int precio, String color,char consumo,double peso){
-        this.color = color;
-        this.consumoEnergetico = consumo;
-        this.peso = peso;
-        this.precioBase = precio;
-    
-    }
-    
     public void ComprobarConsumoEner(char consumoEnergetico){
         if(consumoEnergetico >= 65 && consumoEnergetico <= 70){
             this.consumoEnergetico = consumoEnergetico;
@@ -173,6 +156,24 @@ public class Electrodomestico {
         
         return precioBase + mas;
         
+    }
+    
+    //Constructores 
+    
+    public Electrodomestico(){
+        this(PRECBASE, COLORBASE, CONSBASE, PESOBASE);
+    }
+    
+    public Electrodomestico(int precioBase, double peso){
+        this(precioBase,COLORBASE, CONSBASE, peso);
+    }
+    
+    public Electrodomestico(int precio, String color,char consumo,double peso){
+        ComprobarColor(color);
+        ComprobarConsumoEner(consumo);
+        this.peso = peso;
+        this.precioBase = precio;
+    
     }
     
     
