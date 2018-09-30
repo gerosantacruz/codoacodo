@@ -11,8 +11,11 @@ package actividadobligatoriaunidad5;
  */
 public class Television extends Electrodomestico{
     
+    //Variables
     private int resolucion;
     private boolean tdt;
+    
+    //valores por default
     
     private final static int RESBASE = 20;
     private final static boolean TDTBASE= false;
@@ -59,6 +62,8 @@ public class Television extends Electrodomestico{
         return TDTBASE;
     }
     
+    //contructores
+    
     public Television(){
         this(PRECBASE, COLORBASE, CONSBASE, PESOBASE, RESBASE, false);
     }
@@ -74,6 +79,8 @@ public class Television extends Electrodomestico{
             this.tdt= tdt;
     }
     
+    
+    //Metodo
     @Override
     public double PrecioFinal(){
         double mas = super.PrecioFinal();

@@ -109,6 +109,7 @@ public class Electrodomestico {
     }
     
     
+    //Metodos
     
     public void ComprobarConsumoEner(char consumoEnergetico){
         if(consumoEnergetico >= 65 && consumoEnergetico <= 70){

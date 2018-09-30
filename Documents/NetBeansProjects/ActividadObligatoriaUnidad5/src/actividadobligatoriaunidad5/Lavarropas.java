@@ -11,10 +11,11 @@ package actividadobligatoriaunidad5;
  */
 public class Lavarropas extends Electrodomestico {
     
+    //Variables
     private int carga;
     private final static int CARGA = 5;
 
-  
+    //Metodos
 
     /**
      * @return the carga
@@ -37,6 +38,8 @@ public class Lavarropas extends Electrodomestico {
         return CARGA;
     }
     
+    //Constructores
+    
     public Lavarropas(){
         this(PRECBASE, COLORBASE, CONSBASE, PESOBASE, CARGA);
     }
@@ -51,7 +54,7 @@ public class Lavarropas extends Electrodomestico {
             this.carga = carga;
     }
     
-    
+    //Metodos
     @Override
     public double PrecioFinal(){
         double p = super.PrecioFinal();
